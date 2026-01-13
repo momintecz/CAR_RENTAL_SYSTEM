@@ -1,73 +1,38 @@
 Car Rental Management System
-A web-based application developed to automate the manual processes of car rentals, inventory management, and customer record-keeping. This project was developed as part of the Database Systems (AI2313) course.
+A web-based application developed to automate car rental operations, replacing manual record-keeping with a centralized relational database. The project focuses on data integrity, normalization, and role-based access control.
 
- Features
-Role-Based Authentication: Separate dashboards for Admin and Customers using PHP Sessions.
+Technical Stack
+Backend: PHP for server-side logic and session management.
 
-Vehicle Management: Admin can add, update, and remove vehicles from the fleet.
+Database: MySQL relational database.
 
-Dynamic Rent Calculation: Automatically calculates total rent based on the number of days and car category.
+Environment: Developed and tested using the XAMPP local server environment.
 
-Live Reporting: Real-time tracking of available cars, cars currently on rent, and total revenue.
+Frontend: Built with HTML5 and CSS3.
 
-Database Integrity: Uses MySQL relational database with normalized tables to prevent data redundancy.
+Core Functionality
+Administrative Control: A secure dashboard for managing the vehicle fleet, registering customers, and monitoring active rentals.
 
- Tech Stack
-Frontend: HTML5, CSS3, JavaScript
+Inventory Tracking: Real-time monitoring of car availability, where the system updates a vehicle's status to 'Rented' upon booking.
 
-Backend: PHP
+Automated Rent Calculation: A backend engine that calculates total costs based on the vehicle's daily rate and duration of the rental.
 
-Database: MySQL (Relational)
+Business Intelligence: A reporting module providing a high-level overview of total revenue and live inventory statistics.
 
-Server: XAMPP (Local Hosting)
+Installation and Setup
+Clone the repository to your local machine.
 
- System Requirements
-XAMPP Control Panel (Apache & MySQL)
+Open XAMPP and start the Apache and MySQL services.
 
-Web Browser (Chrome, Firefox, or Edge)
+Import the provided SQL database file through phpMyAdmin.
 
-PHP 7.4+
+Configure the database connection settings in the config.php file.
 
-🔧 Installation & Setup
-Clone the Repository:
+Place the project folder in the htdocs directory and access it via your web browser at http://localhost/project_folder/.
 
-Bash
+Future Scope
+Integration of online payment gateways such as Stripe or PayPal.
 
-git clone https://github.com/your-username/car-rental-system.git
-Database Setup:
+Development of automated SMS and Email notification systems for rental reminders.
 
-Open XAMPP and start Apache and MySQL.
-
-Go to http://localhost/phpmyadmin/.
-
-Create a new database (e.g., car_rental_db).
-
-Import the .sql file provided in the /database folder.
-
-Configuration:
-
-Open config.php and update your database credentials (hostname, username, password, and database name).
-
-Run the Project:
-
-Move the project folder to C:/xampp/htdocs/.
-
-Access the system at http://localhost/car_rental_system/.
-
-Database Schema (ERD)
-The system is designed with a focus on Normalization to ensure data integrity. The primary entities include:
-
-Users: Stores credentials and roles (Admin/User).
-
-Vehicles: Stores car details and availability status.
-
-Customers: Stores personal information (CNIC, Phone, etc.).
-
-Rentals: The core transactional table connecting customers and vehicles.
-
- Future Scope
-Integration with Online Payment Gateways (Stripe/PayPal).
-
-Automated SMS/Email notifications for rental reminders.
-
-GPS tracking for real-time vehicle monitoring.
+GPS integration for real-time vehicle tracking and security.
